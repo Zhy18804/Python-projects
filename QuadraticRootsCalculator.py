@@ -1,17 +1,26 @@
 import math
 
+a = float(input("Enter first coeffcient:"))
+b = float(input("Enter second coeffcient:")) 
+c = float(input("Enter third coeffcient:")) 
+dis = (b*b)-4*a*c
+bottomNum = a * 2
 
-a = input("Enter first coeffcient:")
-b = input("Enter second coeffcient:")
-c = input("Enter third coeffcient:")
+if dis < 0:
+    dis = dis * -1
+    interceptone = str((-b + math.sqrt(dis))/bottomNum)
+    intercepttwo = str((-b - math.sqrt(dis))/bottomNum)
+    imagin = "i"
 
-int(a)
-int(b)
-int(c)
+    print("The x-intercepts are", interceptone + imagin, "i and", intercepttwo + imagin, "i")
+elif dis==0:
+    intercept = -b/bottomNum
+    if intercept == 0:
+        print("The x-intercepts is 0")
+    else:
+        print("The x-intercepts is", intercept)
+else:
+    firstintercept = (-b + math.sqrt(dis))/bottomNum
+    secondintercept = (-b - math.sqrt(dis))/bottomNum
 
-bottomNumber = a * 2
-topNumber = math.sqrt((b*b)-4*a*c)
-firstintercept = (-b + topNumber)/bottomNumber
-secondintercept = (b - topNumber)/bottomNumber
-
-print("The x-intercepts are", firstintercept, "and", secondintercept)
+    print("The x-intercepts are", firstintercept, "and", secondintercept)
