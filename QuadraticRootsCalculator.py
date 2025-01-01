@@ -11,7 +11,6 @@ if dis < 0:
     interceptone = str((-b + math.sqrt(dis))/bottomNum)
     intercepttwo = str((-b - math.sqrt(dis))/bottomNum)
     imagin = "i"
-
     print("The x-intercepts are", interceptone + imagin, "i and", intercepttwo + imagin, "i")
 elif dis==0:
     intercept = -b/bottomNum
